@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ohataken/app-script-http-cli/issues"
   },
-  "homepage": "https://github.com/ohataken/app-script-http-cli#readme"
+  "homepage": "https://github.com/ohataken/app-script-http-cli#readme",
+  "dependencies": {
+    "@googleapis/script": "^0.4.1"
+  }
 }

@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "apps-script-http-cli": "app-script-http-cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ohataken/app-script-http-cli.git"

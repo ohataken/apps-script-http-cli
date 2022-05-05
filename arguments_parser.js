@@ -36,6 +36,10 @@ module.exports = class {
     }
   }
 
+  getRootUrl(rootUrl) {
+    return rootUrl || 'https://script.googleapis.com';
+  }
+
   parseCommand() {
     const token = this.seek();
 

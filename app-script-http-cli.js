@@ -1,4 +1,5 @@
 #! /usr/bin/env node
 
 const ArgumentsParser = require("./arguments_parser");
-ArgumentsParser.parse(process.argv);
+const args = ArgumentsParser.parse(process.argv);
+console.log(args);

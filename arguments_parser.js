@@ -74,10 +74,24 @@ module.exports = class {
 
   parseProcessesList() {
     console.log("processes list");
+ 
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/processes',
+        method: 'GET',
+      },
+    };
   }
 
   parseProcessesListScriptProcesses() {
     console.log("processes listScriptProcesses");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/processes:listScriptProcesses',
+        method: 'GET',
+      },
+    };
   }
 
   parseProjects() {
@@ -101,22 +115,61 @@ module.exports = class {
 
   parseProjectsCreate() {
     console.log("projects create");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/projects',
+        method: 'POST',
+      },
+    };
   }
 
   parseProjectsGet() {
+    const scriptId = this.seek();
     console.log("projects get");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/projects/' + scriptId,
+        method: 'GET',
+      },
+    };
   }
 
   parseProjectsGetContent() {
+    const scriptId = this.seek();
     console.log("projects getContent");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/projects/' + scriptId,
+        method: 'GET',
+      },
+    };
   }
 
   parseProjectsGetMetrics() {
+    const scriptId = this.seek();
     console.log("projects getMetrics");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/projects/' + scriptId,
+        method: 'GET',
+      },
+    };
   }
 
   parseProjectsUpdateContent() {
+    const scriptId = this.seek();
     console.log("projects updateContent");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/projects/' + scriptId,
+        method: 'PATCH',
+      },
+    };
   }
 
   parseProjectsDeployments() {
@@ -139,23 +192,63 @@ module.exports = class {
   }
 
   parseProjectsDeploymentsList() {
+    const scriptId = this.seek();
     console.log("projects.deployments list");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/projects/' + scriptId + '/deployments',
+        method: 'GET',
+      },
+    };
   }
 
   parseProjectsDeploymentsCreate() {
+    const scriptId = this.seek();
     console.log("projects.deployments create");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/projects/' + scriptId + '/deployments',
+        method: 'POST',
+      },
+    };
   }
 
   parseProjectsDeploymentsGet() {
+    const scriptId = this.seek();
     console.log("projects.deployments get");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/projects/' + scriptId + '/deployments',
+        method: 'GET',
+      },
+    };
   }
 
   parseProjectsDeploymentsUpdate() {
+    const scriptId = this.seek();
     console.log("projects.deployments update");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/projects/' + scriptId + '/deployments',
+        method: 'PATCH',
+      },
+    };
   }
 
   parseProjectsDeploymentsDelete() {
+    const scriptId = this.seek();
     console.log("projects.deployments delete");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/projects/' + scriptId + '/deployments',
+        method: 'DELETE',
+      },
+    };
   }
 
   parseProjectsVersions() {
@@ -174,15 +267,39 @@ module.exports = class {
   }
 
   parseProjectsVersionsList() {
+    const scriptId = this.seek();
     console.log("projects.versions list");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/projects/' + scriptId + '/versions',
+        method: 'GET',
+      },
+    };
   }
 
   parseProjectsVersionsCreate() {
+    const scriptId = this.seek();
     console.log("projects.versions create");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/projects/' + scriptId + '/versions',
+        method: 'POST',
+      },
+    };
   }
 
   parseProjectsVersionsGet() {
+    const scriptId = this.seek();
     console.log("projects.versions get");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/projects/' + scriptId + '/versions',
+        method: 'GET',
+      },
+    };
   }
 
   parseScripts() {
@@ -197,7 +314,15 @@ module.exports = class {
   }
 
   parseScriptsRun() {
+    const scriptId = this.seek();
     console.log("scripts run");
+
+    return {
+      options: {
+        url: this.getRootUrl() + '/v1/projects.versions/' + scriptId + ':run',
+        method: 'POST',
+      },
+    };
   }
 
 };
